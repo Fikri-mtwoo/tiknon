@@ -1,0 +1,23 @@
+$(document).ready(function () {
+
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+   });
+
+   $('#sidebarCollapse').on('click', function () {
+    $('#sidebar, #content').toggleClass('active');
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    $(this).toggleClass('active');
+});
+    $(document).ready(function(){
+        $('ul li').click(function(){
+            $('li').removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+});
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+  })
